@@ -32,6 +32,11 @@ def sum(a:Int,b:Int,c:Boolean): Int ={
       println(s)
     }
   }
+  def blackjack(a:Int,b:Int): Unit ={
+    if(a>21&&b>21){
+      return 0
+    }
+  }
 
 
 }
