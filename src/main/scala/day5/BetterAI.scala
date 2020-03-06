@@ -6,10 +6,18 @@ class BetterAI extends AI {
   override def checkWin(enemy: Player): Boolean = {
     past++enemy.hand
     for(p<-past){
-      println("looooool"+p._1+p._2)
     }
-
     super.checkWin(enemy)
+  }
+
+  override def turn(): Unit = {
+    if(past.max._2=="ROCK"){
+      this.hand="PAPER"
+    }else if(past.max._2=="PAPER"){
+      this.hand="SCISSOR"
+    }else{
+      this.hand="ROCK"
+    }
 
   }
 }
