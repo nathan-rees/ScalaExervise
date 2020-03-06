@@ -4,7 +4,8 @@ class BetterAI extends AI {
   var past = scala.collection.mutable.Map("ROCK"->0,"SCISSOR"->0,"PAPER"->0)
 
   override def checkWin(enemy: Player): Boolean = {
-    past++enemy.hand
+    //past++enemy.hand
+    past.+(enemy.hand)
     super.checkWin(enemy)
   }
 
