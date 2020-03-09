@@ -18,8 +18,10 @@ var won=false;
         }else{
           print("*")
         }
+        print("|")
 
       }
+
     }
   }
   def patrolBoat(): Unit ={
